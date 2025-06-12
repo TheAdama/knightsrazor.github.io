@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knight’s Razor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #519a8b;
+      --bg-dark: #1a1a1a;
+      --text-light: #000;
+      --text-dark: #eee;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-light);
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 4em 1em;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 4rem;
+      margin-bottom: 0.2em;
+    }
+
+    .subtle {
+      font-size: 1.2rem;
+      color: inherit;
+      font-style: italic;
+      margin: 0.5em 0;
+    }
+
+    .definition {
+      margin: 2em auto;
+      max-width: 600px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .knight-img {
+      width: 150px;
+      margin: 2em auto;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .dark-mode-toggle {
+      margin-top: 2em;
+      background: none;
+      border: 2px solid currentColor;
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .teaser {
+      margin-top: 3em;
+      font-weight: bold;
+      opacity: 0;
+      animation: reveal 2s ease-in-out 1s forwards;
+    }
+
+    @keyframes reveal {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Knight’s Razor</h1>
+  <p class="subtle">A purely hypothetical framework for conspiracy plausibility.</p>
+  <p class="subtle">But seriously, we all know it’s happening, right?</p>
+  <p class="subtle">Where Occam suggests the simplest explanation is likely true, Knight's Razor asks: <br><em>"Who benefits if the official story is true... and who benefits if it's not?"</em></p>
+
+  <div class="definition">
+    Knight’s Razor: If a conspiracy theory is no more complicated than ultra-elites hunting humans for sport—even if there is zero official proof—then it is plausible.
+  </div>
+
+  <img src="knight-teal.png" alt="Cartoon knight" class="knight-img">
+
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <p class="teaser">Coming Soon: Our First Plausibility Audit</p>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
