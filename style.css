@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* very dark gray */
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main.splash {
+  background-color: #222; /* slightly lighter dark background */
+  padding: 20px;
+  border-radius: 12px;
+}
